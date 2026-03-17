@@ -1,0 +1,19 @@
+
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Python
+__pycache__/
+*.pyc
+backend/venv/
+
+# Secrets
+backend/.env
+
+# Mac
+.DS_Store
+
+# notes 
+notes

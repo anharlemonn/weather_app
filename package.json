@@ -1,0 +1,17 @@
+{
+    "name": "my-app",
+    "version": "1.0.0",
+    "description": "Electron + React + Python/Postgres app",
+    "main": "electron/main.js",
+    "scripts": {
+      "start": "concurrently \"npm run frontend\" \"npm run backend\" \"npm run electron\"",
+      "frontend": "cd frontend && npm run dev",
+      "backend": "cd backend && source venv/bin/activate &&  python3 main.py",
+      "electron": "wait-on http://localhost:5173 && electron ."
+    },
+    "devDependencies": {
+      "concurrently": "^8.2.0",
+      "electron": "^31.0.0",
+      "wait-on": "^7.2.0"
+    }
+  }
